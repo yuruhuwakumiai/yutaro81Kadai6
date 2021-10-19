@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="yutaro81Kadai6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="１" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLw-6G-eFL">
-                                <rect key="frame" x="20" y="142" width="98" height="51"/>
+                                <rect key="frame" x="20" y="98" width="98" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="98" id="QzU-9Y-eUQ"/>
                                     <constraint firstAttribute="height" constant="51" id="W1L-oF-1Hc"/>
@@ -27,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="１００" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq8-pE-NCr">
-                                <rect key="frame" x="285" y="142" width="109" height="51"/>
+                                <rect key="frame" x="471" y="98" width="109" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="57d-Rp-SpM"/>
                                     <constraint firstAttribute="height" constant="51" id="hFV-ht-VjH"/>
@@ -37,10 +36,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ff4-G5-n3r">
-                                <rect key="frame" x="74" y="187" width="267" height="31"/>
+                                <rect key="frame" x="74" y="143" width="453" height="31"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orJ-nx-y9Z">
-                                <rect key="frame" x="153" y="300" width="108" height="31"/>
+                                <rect key="frame" x="153" y="256" width="294" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="判定"/>
                                 <connections>
@@ -48,7 +47,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTr-VM-EHW">
-                                <rect key="frame" x="186.5" y="70" width="41.5" height="20.5"/>
+                                <rect key="frame" x="279.5" y="26" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,8 +71,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answerLabel" destination="xTr-VM-EHW" id="Sse-0l-pMw"/>
                         <outlet property="numslider" destination="Ff4-G5-n3r" id="Kdl-sZ-fB6"/>
-                        <outlet property="sliderLabel" destination="xTr-VM-EHW" id="Sse-0l-pMw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
