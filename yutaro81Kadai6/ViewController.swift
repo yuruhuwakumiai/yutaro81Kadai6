@@ -9,37 +9,37 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak private var numslider: UISlider!
-    @IBOutlet weak private var sliderLabel: UILabel!
+    @IBOutlet weak private var answerLabel: UILabel!
     private var randomNum = Int.random(in: 1...100)
     override func viewDidLoad() {
         super.viewDidLoad()
-        getNum()
+        resetGame()
     }
     @IBAction private func judgeButton(_ sender: Any) {
         let ramdomValue = Int(numslider.value)
+        let resultText: String
     // アラートに結果と値を表示する
         if  randomNum == ramdomValue {
-            var rightAnswer = "当たり"
-            rightAnswer += "\nあなたの値: \(ramdomValue)"
-            presentAlert(message: rightAnswer)
+            resultText = "当たり"
         } else {
-            var wrongAnswer = "はずれ"
-            wrongAnswer += "\nあなたの値: \(ramdomValue)"
-            presentAlert(message: wrongAnswer)
+            resultText = "はずれ"
         }
-        getNum()
+        let message = "\(resultText)\nあなたの値: \(ramdomValue)"
+        presentAlert(message: message)
     }
     // アラートのメソッド
     private func presentAlert(message: String) {
         let alert = UIAlertController(title: "結果", message: message, preferredStyle: .alert)
-        let okAlert = UIAlertAction(title: "再挑戦", style: .default, handler: nil)
+        let okAlert = UIAlertAction(title: "再挑戦",
+                                    style: .default,
+                                    handler: {[weak self] _ in self?.resetGame()})
         alert.addAction(okAlert)
         present(alert, animated: true, completion: nil)
     }
     // sliderLabelの更新,sliderをセンターに戻す
-    private func getNum() {
+    private func resetGame() {
         randomNum = Int.random(in: 1...100)
-        sliderLabel.text = String(randomNum)
+        answerLabel.text = String(randomNum)
         numslider.value = 50
     }
 }

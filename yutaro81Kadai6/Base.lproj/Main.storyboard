@@ -72,8 +72,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answerLabel" destination="xTr-VM-EHW" id="Sse-0l-pMw"/>
                         <outlet property="numslider" destination="Ff4-G5-n3r" id="Kdl-sZ-fB6"/>
-                        <outlet property="sliderLabel" destination="xTr-VM-EHW" id="Sse-0l-pMw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
